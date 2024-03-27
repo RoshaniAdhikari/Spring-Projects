@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="
+    http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+<!-- Definition for textEditor bean -->
+
+<bean id="a1" class="dependencyinjection.Address">
+<constructor-arg value="Mumbai"></constructor-arg>
+<constructor-arg value="Maharashtra"></constructor-arg>
+<constructor-arg value="India"></constructor-arg>
+</bean>
+
+<bean id="e" class="dependencyinjection.Employee">
+<constructor-arg value="12" type="int"></constructor-arg>
+<constructor-arg value="Sona"></constructor-arg>
+<constructor-arg>
+<ref bean="a1"/>
+</constructor-arg>
+</bean>
+<!-- Definition for spellChecker bean -->
+</beans>
